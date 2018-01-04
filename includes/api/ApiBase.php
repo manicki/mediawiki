@@ -750,20 +750,29 @@ abstract class ApiBase extends ContextSource {
 	 * @return array
 	 */
 	public function extractRequestParams( $parseLimit = true ) {
+		error_log( 'extracting params' );
 		// Cache parameters, for performance and to avoid T26564.
 		if ( !isset( $this->mParamCache[$parseLimit] ) ) {
+			error_log( 'not cached' );
 			$params = $this->getFinalParams();
+			error_log( 'got final params' );
 			$results = [];
 
 			if ( $params ) { // getFinalParams() can return false
+				error_log( 'getting params' );
 				foreach ( $params as $paramName => $paramSettings ) {
+					error_log( 'getting: ' . $paramName );
 					$results[$paramName] = $this->getParameterFromSettings(
 						$paramName, $paramSettings, $parseLimit );
+					error_log( 'got: ' . $paramName );
 				}
 			}
 			$this->mParamCache[$parseLimit] = $results;
+		} else {
+			error_log( 'cached params!' );
 		}
 
+		error_log( 'all extracted' );
 		return $this->mParamCache[$parseLimit];
 	}
 
