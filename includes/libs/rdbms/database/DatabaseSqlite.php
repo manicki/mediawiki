@@ -713,6 +713,14 @@ class DatabaseSqlite extends Database {
 	}
 
 	public function upsert( $table, array $rows, $uniqueIndexes, array $set, $fname = __METHOD__ ) {
+		var_dump( $this->getServerVersion() );
+		var_dump( $this->getBindingHandle()->getAttribute( PDO::ATTR_DRIVER_NAME ) );
+		var_dump( $this->getBindingHandle()->getAttribute( PDO::ATTR_CLIENT_VERSION ) );
+		var_dump( system( 'sqlite3 --version' ) );
+		//var_dump( phpinfo());
+		var_dump( $this->query( 'SELECT sqlite_version()' ) );
+		var_dump( \Sqlite3::version() );
+
 		// Supports UPSERT-like clauses with INSERT, per http://www.sqlite.org/releaselog/3_24_0.html
 		if ( version_compare( $this->getServerVersion(), '3.24.0', '<' ) ) {
 			// Use inefficient fallback implementation
