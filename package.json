@@ -32,6 +32,7 @@
     "grunt-karma": "3.0.2",
     "grunt-stylelint": "0.14.0",
     "grunt-svgmin": "5.0.0",
+    "jsdoc": "3.6.3",
     "karma": "4.4.1",
     "karma-chrome-launcher": "3.1.0",
     "karma-firefox-launcher": "1.3.0",
@@ -40,6 +41,7 @@
     "postcss-less": "2.0.0",
     "qunit": "2.9.3",
     "stylelint-config-wikimedia": "0.9.0",
+    "typescript": "3.8.3",
     "wdio-mediawiki": "file:tests/selenium/wdio-mediawiki",
     "webdriverio": "5.13.2"
   }
