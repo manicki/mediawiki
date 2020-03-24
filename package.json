@@ -13,6 +13,7 @@
     "selenium-test": "wdio ./tests/selenium/wdio.conf.js"
   },
   "devDependencies": {
+    "@types/jquery": "^3.3.33",
     "@wdio/cli": "5.13.2",
     "@wdio/devtools-service": "5.13.2",
     "@wdio/dot-reporter": "5.13.2",

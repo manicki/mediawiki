@@ -1,7 +1,9 @@
 {
 	"include": [
 		"resources/@types",
-		"resources/src/startup/mediawiki.log.js"
+		"resources/src/startup/mediawiki.log.js",
+		"resources/src/mediawiki.Title/Title.js"
+
 	],
 	"compilerOptions": {
 		"resolveJsonModule": true,
@@ -25,6 +27,7 @@
 			]
 		},
 		"typeRoots": [
+			"./node_modules/@type",
 			"./resources/@types"
 		]
 	}
