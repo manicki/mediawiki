@@ -14,7 +14,9 @@
 	// Replace the mw.log() no-op defined in mediawiki.js, with
 	// a function that logs to console.log (if available).
 	if ( window.console && console.log && console.log.apply ) {
+		// @ts-ignore
 		mw.log = function () {
+			// @ts-ignore
 			console.log.apply( console, arguments );
 		};
 		// Re-attach original sub methods

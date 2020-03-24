@@ -1,6 +1,7 @@
 {
 	"include": [
-		"resources/@types"
+		"resources/@types",
+		"resources/src/startup/mediawiki.log.js"
 	],
 	"compilerOptions": {
 		"resolveJsonModule": true,
